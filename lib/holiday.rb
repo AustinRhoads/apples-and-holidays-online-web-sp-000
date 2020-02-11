@@ -66,9 +66,9 @@ holiday_hash.each do |season, holiday|
  holiday.each do |day, supplies|
 subtitle = ""
 if day.include?("_") == true
-  subtitle = day.split("_").capitalize.join(" ")
+  subtitle = day.to_s.split("_").capitalize.join(" ")
 else
-  subtitle = day.capitalize
+  subtitle = day.to_s.capitalize
 end
    puts "  #{subtitle}: #{supplies.join(", ")}"
 
